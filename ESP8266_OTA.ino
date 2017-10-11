@@ -32,10 +32,10 @@ void setup() {
   // ArduinoOTA.setPort(8266);
 
   // Hostname defaults to esp8266-[ChipID]
-   ArduinoOTA.setHostname("susiloharjoDevice");
+   ArduinoOTA.setHostname("susiloharjoTest");
 
   // No authentication by default
-   ArduinoOTA.setPassword((const char *)"admin");
+   ArduinoOTA.setPassword((const char *)"4ku4ku");
 
   ArduinoOTA.onStart([]() {
     Serial.println("Start");
@@ -65,9 +65,10 @@ void setup() {
 void loop() {
   ArduinoOTA.handle();
   digitalWrite(LED_BUILTIN, HIGH);   
-  delay(500);                 
+  delay(2000);                 
   digitalWrite(LED_BUILTIN, LOW);
-  delay(500);
+  delay(2000);
 
+yield();
   
 }
